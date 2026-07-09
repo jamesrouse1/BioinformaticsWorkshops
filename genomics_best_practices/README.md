@@ -1,6 +1,6 @@
 # Genomics Best-Practices Workshops
 
-This folder contains streamlined PDF decks for common genomics consultation and training topics. Each PDF includes a small BSR/CSHL logo in the bottom-right corner for consistent workshop branding.
+This folder contains redesigned PDF decks for common genomics consultation and training topics. Each PDF uses a consistent CSHL-branded theme with readable spacing for GitHub preview and workshop handouts.
 
 | Topic | PDF |
 | --- | --- |
@@ -11,3 +11,4 @@ This folder contains streamlined PDF decks for common genomics consultation and 
 | ChIP-seq | [ChIP_best_practices.pdf](slides/ChIP_best_practices.pdf) |
 | WGS/WES | [WGS_WES_best_practices.pdf](slides/WGS_WES_best_practices.pdf) |
 | Long-read sequencing | [long_read_best_practices.pdf](slides/long_read_best_practices.pdf) |
+| Single-cell RNA-seq | [scRNA_best_practices.pdf](slides/scRNA_best_practices.pdf) |

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/bsr_cshl_logo.png" width="420" alt="Bioinformatics Shared Resource, Cold Spring Harbor Laboratory"/>
+<img src="assets/cshl_logo.png" width="150" alt="Cold Spring Harbor Laboratory"/>
 
 # Bioinformatics Teaching Materials
 
@@ -20,7 +20,7 @@ Hands-on workshop decks are included as editable PowerPoint files and PDF export
 | R | Hands-on R workshop slides, R scripts, CPM practice materials, and small example count matrices |
 | Machine learning | Workshop slides and notebooks covering decision trees, random forests, SVMs, hierarchical clustering, and model practice |
 | Single-cell RNA-seq | Seurat tutorial slides, rendered tutorial HTML, R Markdown source, practice questions, and solutions |
-| Genomics best practices | PDF decks for RNA-seq, ATAC-seq, ChIP-seq, WGS/WES, long-read sequencing, biostatistics, and experimental design |
+| Genomics best practices | CSHL-branded PDF decks for RNA-seq, ATAC-seq, ChIP-seq, WGS/WES, long-read sequencing, single-cell RNA-seq, biostatistics, and experimental design |
 
 ## Repository Layout
 
