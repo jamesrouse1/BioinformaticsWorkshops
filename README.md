@@ -35,11 +35,11 @@ Click a topic below to open the PDF preview directly in GitHub.
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="machine_learning/slides/BSR_James_ML_Workshop.pdf">Machine Learning Workshop</a></h3>
+      <h3><a href="machine_learning/slides/Intro_MachineLearningInBioinformatics.pdf">Machine Learning Workshop</a></h3>
       <p>Decision trees, random forests, SVMs, hierarchical clustering, model practice, and introductory ML concepts.</p>
       <p>
-        <a href="machine_learning/slides/BSR_James_ML_Workshop.pdf">Open PDF</a> |
-        <a href="machine_learning/slides/Intro_MachineLearningInBioinformatics_RadUtama.pdf">Rad Utama intro PDF</a> |
+        <a href="machine_learning/slides/Intro_MachineLearningInBioinformatics.pdf">Open Intro</a> |
+        <a href="machine_learning/slides/BSR_James_ML_Workshop.pdf">Open Advanced Methods</a> |
         <a href="machine_learning/notebooks/model_practice_california_housing.ipynb">Practice notebook</a>
       </p>
     </td>
