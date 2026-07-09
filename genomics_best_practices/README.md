@@ -1,6 +1,6 @@
 # Genomics Best-Practices Workshops
 
-This folder contains redesigned PDF decks for common genomics consultation and training topics. Each PDF uses a consistent CSHL-branded theme with readable spacing for GitHub preview and workshop handouts.
+This folder contains minimally restyled PDF decks for common genomics consultation and training topics. Each PDF preserves the original charts, diagrams, tables, and figures while adding a clean CSHL-branded frame for GitHub preview and workshop handouts.
 
 | Topic | PDF |
 | --- | --- |

@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="assets/cshl_logo.png" width="150" alt="Cold Spring Harbor Laboratory"/>
+<img src="assets/affiliation_logos.png" width="760" alt="Northeastern University, Incendia Therapeutics, and Cold Spring Harbor Laboratory"/>
 
 # Bioinformatics Teaching Materials
 
 Workshops, slides, notebooks, and reusable teaching scripts for computational biology, genomics, statistics, R, Python, and machine learning.
 
-Hands-on workshop decks are included as editable PowerPoint files and PDF exports. Genomics best-practices materials are kept as streamlined PDFs for easier GitHub preview.
+Workshop PDFs are the primary GitHub preview files. Editable PowerPoint decks are retained only where they are useful as source material for teaching updates. Genomics best-practices materials are kept as minimal CSHL-branded PDFs that preserve original charts, diagrams, and figures.
 
 </div>
 
@@ -47,8 +47,8 @@ Hands-on workshop decks are included as editable PowerPoint files and PDF export
 
 ## Suggested Use
 
-- Start with the slide deck for the topic.
-- Open the `.pdf` version on GitHub for quick preview. For hands-on workshops, download the `.pptx` version when you want to edit slides.
+- Start with the `.pdf` deck for the topic.
+- Use the `.pptx` files only when you want to edit the source slides for a future workshop.
 - Use the notebooks or scripts as live-coding material.
 - Use the practice notebooks and small example datasets for hands-on exercises.
 - Adapt the best-practices decks for project onboarding, consultation, or short-format training.
