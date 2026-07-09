@@ -6,7 +6,7 @@
 
 Workshops, slides, notebooks, and reusable teaching scripts for computational biology, genomics, statistics, R, Python, and machine learning.
 
-Most slide decks are included as editable PowerPoint files and PDF exports so they can be previewed directly on GitHub.
+Hands-on workshop decks are included as editable PowerPoint files and PDF exports. Genomics best-practices materials are kept as streamlined PDFs for easier GitHub preview.
 
 </div>
 
@@ -20,7 +20,7 @@ Most slide decks are included as editable PowerPoint files and PDF exports so th
 | R | Hands-on R workshop slides, R scripts, CPM practice materials, and small example count matrices |
 | Machine learning | Workshop slides and notebooks covering decision trees, random forests, SVMs, hierarchical clustering, and model practice |
 | Single-cell RNA-seq | Seurat tutorial slides, rendered tutorial HTML, R Markdown source, practice questions, and solutions |
-| Genomics best practices | RNA-seq, ATAC-seq, ChIP-seq, WGS/WES, long-read sequencing, biostatistics, and experimental design slide decks |
+| Genomics best practices | PDF decks for RNA-seq, ATAC-seq, ChIP-seq, WGS/WES, long-read sequencing, biostatistics, and experimental design |
 
 ## Repository Layout
 
@@ -48,7 +48,7 @@ Most slide decks are included as editable PowerPoint files and PDF exports so th
 ## Suggested Use
 
 - Start with the slide deck for the topic.
-- Open the `.pdf` version on GitHub for quick preview, or download the `.pptx` version for editing.
+- Open the `.pdf` version on GitHub for quick preview. For hands-on workshops, download the `.pptx` version when you want to edit slides.
 - Use the notebooks or scripts as live-coding material.
 - Use the practice notebooks and small example datasets for hands-on exercises.
 - Adapt the best-practices decks for project onboarding, consultation, or short-format training.
