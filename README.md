@@ -1,32 +1,109 @@
 <div align="center">
 
-<img src="assets/affiliation_logos.png" width="760" alt="Northeastern University, Incendia Therapeutics, and Cold Spring Harbor Laboratory"/>
-
 # Bioinformatics Teaching Materials
 
-Workshops, slides, notebooks, and reusable teaching scripts for computational biology, genomics, statistics, R, Python, and machine learning.
+Workshop decks, notebooks, scripts, and practice materials for computational biology, genomics, statistics, R, Python, and machine learning.
 
-Workshop PDFs are the primary GitHub preview files. Editable PowerPoint decks are retained only where they are useful as source material for teaching updates. Genomics best-practices materials are kept as minimal CSHL-branded PDFs that preserve original charts, diagrams, and figures.
+Click a topic below to open the PDF preview directly in GitHub.
 
 </div>
 
 ---
 
-## Contents
+## Workshop Library
 
-| Topic | Materials |
-| --- | --- |
-| Python | Introductory Python workshop slides, notebooks, practice notebook, and solutions |
-| R | Hands-on R workshop slides, R scripts, CPM practice materials, and small example count matrices |
-| Machine learning | Workshop slides and notebooks covering decision trees, random forests, SVMs, hierarchical clustering, and model practice |
-| Single-cell RNA-seq | Seurat tutorial slides, rendered tutorial HTML, R Markdown source, practice questions, and solutions |
-| Genomics best practices | CSHL-branded PDF decks for RNA-seq, ATAC-seq, ChIP-seq, WGS/WES, long-read sequencing, single-cell RNA-seq, biostatistics, and experimental design |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="python/slides/HandsOnWithPython_Workshop_Pt1.pdf">Python Workshop</a></h3>
+      <p>Introductory Python for scientific computing, notebooks, practice questions, and solutions.</p>
+      <p>
+        <a href="python/slides/HandsOnWithPython_Workshop_Pt1.pdf">Open PDF</a> |
+        <a href="python/notebooks/Python_Core_Series.ipynb">Notebook</a> |
+        <a href="python/notebooks/Python_Core_Series_Practice.ipynb">Practice</a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="r/slides/HandsOnWithR_Workshop_Pt1_Feb2026.pdf">R Workshop</a></h3>
+      <p>Hands-on R workshop covering tabular data, plotting, count matrices, CPM, and reproducible scripts.</p>
+      <p>
+        <a href="r/slides/HandsOnWithR_Workshop_Pt1_Feb2026.pdf">Open PDF</a> |
+        <a href="r/scripts/R_workshop_script.R">Script</a> |
+        <a href="r/data/Tumor_vs_Normal_counts.csv">Example data</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="machine_learning/slides/BSR_James_ML_Workshop.pdf">Machine Learning Workshop</a></h3>
+      <p>Decision trees, random forests, SVMs, hierarchical clustering, model practice, and introductory ML concepts.</p>
+      <p>
+        <a href="machine_learning/slides/BSR_James_ML_Workshop.pdf">Open PDF</a> |
+        <a href="machine_learning/slides/Intro_MachineLearningInBioinformatics_RadUtama.pdf">Rad Utama intro PDF</a> |
+        <a href="machine_learning/notebooks/model_practice_california_housing.ipynb">Practice notebook</a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="scrna/slides/seurat_tutorial.pdf">Single-cell RNA-seq Workshop</a></h3>
+      <p>Seurat tutorial materials for QC, clustering, annotation, marker discovery, and interpretation.</p>
+      <p>
+        <a href="scrna/slides/seurat_tutorial.pdf">Open PDF</a> |
+        <a href="scrna/tutorial/seurat_tutorial.html">Rendered tutorial</a> |
+        <a href="scrna/exercises/seurat_practice_questions.Rmd">Practice</a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+## Genomics Best Practices
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="genomics_best_practices/slides/experimental_design.pdf">Experimental Design</a></h3>
+      <p>Sample planning and design considerations for sequencing experiments.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="genomics_best_practices/slides/Biostats.pdf">Biostatistics</a></h3>
+      <p>Power, statistical test selection, common assumptions, and practical interpretation.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="genomics_best_practices/slides/RNA_Seq_Best_Practices.pdf">RNA-seq Best Practices</a></h3>
+      <p>Design, alignment, quantification, differential expression, and downstream interpretation.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="genomics_best_practices/slides/scRNA_best_practices.pdf">Single-cell RNA-seq Best Practices</a></h3>
+      <p>QC, normalization, integration, clustering, and annotation concepts.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="genomics_best_practices/slides/ATACSeq_best_practices.pdf">ATAC-seq Best Practices</a></h3>
+      <p>Library quality, alignment, accessibility, QC, and interpretation.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="genomics_best_practices/slides/ChIP_best_practices.pdf">ChIP-seq Best Practices</a></h3>
+      <p>Controls, peak calling, signal tracks, QC, and experimental considerations.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="genomics_best_practices/slides/WGS_WES_best_practices.pdf">WGS/WES Best Practices</a></h3>
+      <p>Reference-aware data handling, variant analysis concepts, and reproducible summaries.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="genomics_best_practices/slides/long_read_best_practices.pdf">Long-read Sequencing Best Practices</a></h3>
+      <p>Platform considerations, QC, alignment, and interpretation for long-read assays.</p>
+    </td>
+  </tr>
+</table>
 
 ## Repository Layout
 
 ```text
 .
-├── assets/
 ├── genomics_best_practices/
 │   └── slides/
 ├── machine_learning/
@@ -47,36 +124,10 @@ Workshop PDFs are the primary GitHub preview files. Editable PowerPoint decks ar
 
 ## Suggested Use
 
-- Start with the `.pdf` deck for the topic.
-- Use the `.pptx` files only when you want to edit the source slides for a future workshop.
-- Use the notebooks or scripts as live-coding material.
-- Use the practice notebooks and small example datasets for hands-on exercises.
-- Adapt the best-practices decks for project onboarding, consultation, or short-format training.
-
-## Topics Covered
-
-### Programming
-
-- Python basics for scientific computing
-- R basics for tabular data, plotting, and count-matrix handling
-- Reproducible scripts and notebooks
-
-### Genomics
-
-- RNA-seq experimental design and analysis concepts
-- ATAC-seq and ChIP-seq best practices
-- WGS/WES analysis concepts
-- Long-read sequencing considerations
-- Single-cell RNA-seq analysis with Seurat, including QC, clustering, annotation, and interpretation
-
-### Statistics And Machine Learning
-
-- Biostatistics and study design
-- CPM normalization and simple count-matrix exercises
-- Decision trees and random forests
-- Support vector machines
-- Hierarchical clustering for expression data
-- Train/test thinking and model interpretation
+- Start with the linked PDF for the topic.
+- Use notebooks or scripts as live-coding material.
+- Use practice notebooks and small example datasets for hands-on exercises.
+- Use editable `.pptx` files only when preparing future workshop versions.
 
 ## Notes
 
