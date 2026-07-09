@@ -35,19 +35,19 @@ Click a topic below to open the PDF preview directly in GitHub.
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="bulk_rnaseq/slides/Hands_on_bulkRNAseq_CodeSpringLab.pdf">Bulk RNA-seq CodeSpringLab Workshop</a></h3>
+      <h3><a href="bulk_rnaseq/Hands_on_bulkRNAseq_CodeSpringLab.pdf">Bulk RNA-seq CodeSpringLab Workshop</a></h3>
       <p>Hands-on bulk RNA-seq workflow training using CodeSpringLab, from setup through downstream analysis outputs.</p>
       <p>
-        <a href="bulk_rnaseq/slides/Hands_on_bulkRNAseq_CodeSpringLab.pdf">Open PDF</a> |
-        <a href="bulk_rnaseq/slides/Hands_on_bulkRNAseq_CodeSpringLab.pptx">Editable slides</a>
+        <a href="bulk_rnaseq/Hands_on_bulkRNAseq_CodeSpringLab.pdf">Open PDF</a> |
+        <a href="bulk_rnaseq/Hands_on_bulkRNAseq_CodeSpringLab.pptx">Editable slides</a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="bulk_atacseq/slides/Hands_on_bulkATACseq_CodeSpringLab.pdf">Bulk ATAC-seq CodeSpringLab Workshop</a></h3>
+      <h3><a href="bulk_atacseq/Hands_on_bulkATACseq_CodeSpringLab.pdf">Bulk ATAC-seq CodeSpringLab Workshop</a></h3>
       <p>Hands-on bulk ATAC-seq workflow training using CodeSpringLab, including setup, processing, and output review.</p>
       <p>
-        <a href="bulk_atacseq/slides/Hands_on_bulkATACseq_CodeSpringLab.pdf">Open PDF</a> |
-        <a href="bulk_atacseq/slides/Hands_on_bulkATACseq_CodeSpringLab.pptx">Editable slides</a>
+        <a href="bulk_atacseq/Hands_on_bulkATACseq_CodeSpringLab.pdf">Open PDF</a> |
+        <a href="bulk_atacseq/Hands_on_bulkATACseq_CodeSpringLab.pptx">Editable slides</a>
       </p>
     </td>
   </tr>
@@ -123,9 +123,7 @@ Click a topic below to open the PDF preview directly in GitHub.
 ```text
 .
 ├── bulk_atacseq/
-│   └── slides/
 ├── bulk_rnaseq/
-│   └── slides/
 ├── genomics_best_practices/
 │   └── slides/
 ├── machine_learning/
