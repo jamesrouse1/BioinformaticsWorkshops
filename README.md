@@ -6,6 +6,8 @@
 
 Workshops, slides, notebooks, and reusable teaching scripts for computational biology, genomics, statistics, R, Python, and machine learning.
 
+Most slide decks are included as editable PowerPoint files and PDF exports so they can be previewed directly on GitHub.
+
 </div>
 
 ---
@@ -17,7 +19,7 @@ Workshops, slides, notebooks, and reusable teaching scripts for computational bi
 | Python | Introductory Python workshop slides, notebooks, practice notebook, and solutions |
 | R | Hands-on R workshop slides, R scripts, CPM practice materials, and small example count matrices |
 | Machine learning | Workshop slides and notebooks covering decision trees, random forests, SVMs, hierarchical clustering, and model practice |
-| Single-cell RNA-seq | scRNA-seq best-practices slides and a reusable starter analysis template |
+| Single-cell RNA-seq | Seurat tutorial slides, rendered tutorial HTML, R Markdown source, practice questions, and solutions |
 | Genomics best practices | RNA-seq, ATAC-seq, ChIP-seq, WGS/WES, long-read sequencing, biostatistics, and experimental design slide decks |
 
 ## Repository Layout
@@ -38,13 +40,15 @@ Workshops, slides, notebooks, and reusable teaching scripts for computational bi
 │   ├── scripts/
 │   └── slides/
 └── scrna/
-    ├── scripts/
-    └── slides/
+    ├── exercises/
+    ├── slides/
+    └── tutorial/
 ```
 
 ## Suggested Use
 
 - Start with the slide deck for the topic.
+- Open the `.pdf` version on GitHub for quick preview, or download the `.pptx` version for editing.
 - Use the notebooks or scripts as live-coding material.
 - Use the practice notebooks and small example datasets for hands-on exercises.
 - Adapt the best-practices decks for project onboarding, consultation, or short-format training.
@@ -63,7 +67,7 @@ Workshops, slides, notebooks, and reusable teaching scripts for computational bi
 - ATAC-seq and ChIP-seq best practices
 - WGS/WES analysis concepts
 - Long-read sequencing considerations
-- Single-cell RNA-seq QC, clustering, annotation, and interpretation
+- Single-cell RNA-seq analysis with Seurat, including QC, clustering, annotation, and interpretation
 
 ### Statistics And Machine Learning
 

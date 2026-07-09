@@ -1,0 +1,162 @@
+---
+title: "seurat_practice.Rmd"
+output: html_document
+date: "2025-10-08"
+---
+
+```{r setup, include=FALSE}
+library(Seurat)
+library(dplyr)
+
+# Creating folder and reading in data
+outdir <- "~/single_cell_practice"
+outdir <- path.expand(outdir)  
+if (!dir.exists(outdir)) {
+  dir.create(outdir, recursive = TRUE)
+}
+
+data_file <- file.path(outdir, "pbmc3k_filtered_gene_bc_matrices.tar.gz")
+download.file(
+  url = "https://cf.10xgenomics.com/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz",
+  destfile = data_file,
+  mode = "wb"
+)
+untar(data_file, exdir = outdir)
+data_dir <- file.path(outdir, "filtered_gene_bc_matrices", "hg19")
+
+##################################################
+pbmc.data <- Read10X(data.dir = data_dir)
+
+pbmc <- CreateSeuratObject(
+  counts = pbmc.data,
+  project = "pbmc3k",
+  min.cells = 3,
+  min.features = 200
+)
+```
+
+Question 1
+```{r}
+#Calculate mitochondrial percentage (pattern = "^MT-") as percent.mt
+pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
+
+# Calculate ribosomal percentage (pattern = "^RP[SL]") as percent.rb
+pbmc[["percent.rb"]] <- PercentageFeatureSet(pbmc, pattern = "^RP[SL]")
+
+# Create a violin plot of nFeature_RNA, nCount_RNA, percent.mt, percent.rb
+VlnPlot(pbmc, features = c("nFeature_RNA", "nCount_RNA", "percent.mt", "percent.rb"), ncol = 4)
+
+# How many cells are in the original object?
+ncol(pbmc)
+
+# Filter for nFeature_RNA > 200, nFeature_RNA < 2500, percent.mt < 5, percent.rb < 45
+pbmc <- subset(
+  pbmc,
+  subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5 & percent.rb < 45
+)
+
+# How many cells remain?
+ncol(pbmc)
+```
+
+Question 2
+
+```{r}
+# Plot FeatureScatter of percent.rb and percent.mt
+plot1 <- FeatureScatter(pbmc, feature1 = "percent.rb", feature2 = "percent.mt")
+
+plot1
+
+# Log normalize the data, but set the scale factor to 1,000,000 (counts per million)
+pbmc <- NormalizeData(pbmc, normalization.method = "LogNormalize", scale.factor = 1000000)
+
+```
+Question 3
+```{r}
+# Find the top 3000 variable features
+pbmc <- FindVariableFeatures(pbmc, selection.method = "vst", nfeatures = 3000)
+
+# Identify the 20 most highly variable genes
+top20 <- head(VariableFeatures(pbmc), 20)
+
+# plot variable features with and without labels
+plot1 <- VariableFeaturePlot(pbmc)
+plot2 <- LabelPoints(plot = plot1, points = top20, repel = TRUE)
+plot1 + plot2
+```
+
+Question 4
+```{r}
+# Scale data and perform PCA
+all.genes <- rownames(pbmc)
+pbmc <- ScaleData(pbmc, features = all.genes)
+
+pbmc <- RunPCA(pbmc, features = VariableFeatures(object = pbmc))
+
+```
+
+Question 5
+```{r}
+# Plot DimHeatmap of the first 20 PCs and top 500 cells
+DimHeatmap(pbmc, dims = 1:20, cells = 500, balanced = TRUE)
+
+# Plot elbow plot of the PCs
+ElbowPlot(pbmc)
+```
+
+Question 6
+```{r}
+# Run FindNeighbors with 7 PCs
+pbmc <- FindNeighbors(pbmc, dims = 1:7)
+
+# Run FindClusters with resolution of 0.8
+pbmc <- FindClusters(pbmc, resolution = 0.8)
+```
+
+Question 7
+```{r}
+# Run the UMAP using 7 PCs. Also change n.neighbors to 20. ?RunUMAP for help
+pbmc <- RunUMAP(pbmc, dims = 1:7, n.neighbors = 20)
+
+# Plot UMAP
+DimPlot(pbmc, reduction = "umap") 
+```
+
+Question 8
+```{r}
+# Find the top markers in cluster 2
+cluster2.markers <- FindMarkers(pbmc, ident.1 = 2)
+
+head(cluster2.markers)
+```
+
+Question 9
+```{r}
+# Store top 5 markers in a list. Hint: Use head on the cluster2.markers.
+# Then, use top5 <- c("Gene1", "Gene2".....) to store the top 5 markers.
+top5 <- c("CD79A", "MS4A1", "TCL1A", "LINC00926", "CD79B")
+```
+
+Question 10
+```{r}
+# Plot the top 5 cluster 2 markers on a violin plot and on the UMAP
+VlnPlot(pbmc, features = top5)
+FeaturePlot(pbmc, features = top5)
+```
+
+Challenge
+```{r}
+## CHALLENGE: Use the AddModuleScore function to add a signature score of the top 5 markers. Use ?AddModuleScore 
+# for help and name it Cluster2_Score
+pbmc <- AddModuleScore(
+  object = pbmc,
+  features = list(top5),
+  name = "Cluster2_Score"
+)
+
+# Plot this feature on the UMAP. Note: Check colnames(pbmc@meta.data). Seurat may have added a "1" after the name
+# of your score
+# Visualize on UMAP
+FeaturePlot(pbmc, features = "Cluster2_Score1")
+```
+
